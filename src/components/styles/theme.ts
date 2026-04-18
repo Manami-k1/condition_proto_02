@@ -1,5 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 import { FONT, FONT_FAMILY, KeyColors } from "./const";
+import { MuiCard } from "./theme/components/muiCards";
 
 declare module "@mui/material/Typography" {
   interface TypographyPropsVariantOverrides {
@@ -15,26 +16,27 @@ export const theme = createTheme({
     ...FONT,
   },
   components: {
-    MuiButton: {
-      styleOverrides: {
-        root: {},
-      },
-      variants: [
-        {
-          props: { variant: "contained" },
-          style: {},
-        },
-        {
-          props: { variant: "outlined" },
-          style: {
-            // color: KeyColors.PRIMARY_600,
-            "&:hover": {
-              //   backgroundColor: KeyColors.PRIMARY_700,
-              //   color: GrayColors.GRAY_00,
-            },
-          },
-        },
-      ],
-    },
+    MuiCard: MuiCard,
+    // MuiButton: {
+    //   styleOverrides: {
+    //     root: {},
+    //   },
+    //   variants: [
+    //     {
+    //       props: { variant: "contained" },
+    //       style: {},
+    //     },
+    //     {
+    //       props: { variant: "outlined" },
+    //       style: {
+    //         // color: KeyColors.PRIMARY_600,
+    //         "&:hover": {
+    //           //   backgroundColor: KeyColors.PRIMARY_700,
+    //           //   color: GrayColors.GRAY_00,
+    //         },
+    //       },
+    //     },
+    //   ],
+    // },
   },
 });

@@ -7,10 +7,11 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { theme } from "./components/styles/theme";
 import { globalStyle } from "./components/styles/globalStyle";
+import { routeTree } from "./routeTree.gen";
 
 const queryClient = new QueryClient();
 const router = createRouter({
-  // routeTree,
+  routeTree,
   context: {
     queryClient,
   },
